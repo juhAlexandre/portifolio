@@ -1,0 +1,662 @@
+  /*site wide*/
+  body {  font-family: 'Raleway', sans-serif;}
+
+  a { text-decoration: none;}
+
+  p { margin: 0;}
+
+
+
+  /*nav bar*/
+  #navBar {
+      height: 60px;
+      position: fixed;     
+      background: rgba(6, 31, 69, 0.1);
+      top: 0;
+      width: 100%;
+      z-index: 100;
+  }
+  .horizontal:hover{
+    box-shadow: #fff 1px 0px 3px;
+    background: rgb(255, 255, 255,0.9);
+  }
+  
+
+  nav.horizontal ul {
+      padding-left: 0;
+      margin-left: 0;
+      
+  }
+
+  nav.horizontal li {
+      display: block;
+      float: left;
+      padding: 0;
+  }
+
+  nav a {
+      
+      text-decoration: none;
+      font-weight: 600;
+      color: #fff;
+  }
+
+  nav a:hover {
+      /* color: #061f45; */
+      text-shadow: #000 1px 1px 1px;
+      border-bottom: #fff 1px solid ;
+  }
+
+  #leftNav {
+      float: left;
+      margin-left: 30px;
+  }
+
+  #leftNav ul li {
+      margin: 0px 8px 0 300px;
+      height: 19px;
+  }
+
+  #rightNav {
+      display: flex;
+      justify-content: end;
+      margin-right: 30px;
+  }
+
+  #rightNav ul li {
+      margin: 0px 8px;
+      height: 30px;
+  }
+
+  nav img {
+      width: 30px;
+  }
+
+  /*nav bar hovers*/
+
+  .facebookHover,
+  .tumblrHover,
+  .twitterHover,
+  .pinterestHover,
+  .instagramHover,
+  .dribbbleHover,
+  .linkedinHover
+  /* .socialHover*/ {
+    border-radius: 18px;
+    transition: background .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out;
+    -webkit-transition: background .2s ease-in-out;
+    background-color: teal;
+}
+
+
+  .facebookHover {
+      background: #3B5998;     
+  }
+  .tumblrHover {
+      background: #32506d;
+  }
+  .twitterHover {
+      background: #00aced;  
+  }
+  .pinterestHover {
+      background: #cb2027; 
+  }
+  .instagramHover {
+      background: #517fa4; 
+  }
+  .dribbbleHover {
+      background: #ea4c89;  
+  }
+  .linkedinHover {
+      background: #007bb6;   
+  }
+
+
+
+  /*homepage*/
+.imglogo{
+   position: absolute;
+   top: 110px;
+   
+}
+  .ola{
+    position: relative;
+    color: #fff;
+    top:12rem;
+    text-shadow: #000 1px 1px 1px;
+  }
+  #intro {
+      height: 100vh;
+      width: 100%;     
+      background: url("../img/background2.png") no-repeat center center fixed; 
+      background-position-y: 0px;
+      background-size: cover;
+      margin: 0 auto;
+      position: relative;
+      /* top: -110px; */
+  }
+
+  #wrapper {
+      width: 900px;
+      margin: 0px auto;
+      height: 100vh;
+      overflow: auto;
+      position: relative;
+      overflow: hidden;
+  }
+
+ /* #work{
+    margin-top: -110px;
+ } */
+ 
+  #mark {
+    position: relative;
+      margin-top: 10vh;
+      width: 50%;
+      transform: rotate(-10deg);
+  }
+
+  #details {
+    position: absolute;
+      width: 316px;
+      top: 350px;
+      left: 100px;
+      font-weight: 200;
+      padding: 5px;
+      font-size: .9em;
+    font-weight: 500;
+      color: #fff;
+     background: rgba(6, 31, 69, 0.5);
+      border-top: 1px solid #fff;
+      padding-top: 10px;
+  }
+
+  #caption {
+      position: absolute;
+      bottom: 18vh;
+      right: 0;
+  }
+
+  #caption h2,
+  #caption h3 {
+      background-color: rgba(6, 31, 69, 0.2);
+      color: #fff;
+      display: block;
+      float: right;
+      clear: both;
+      padding: 3px 5px;
+      margin: 0;
+  }
+
+  #caption h2 {
+      font-weight: 600;
+      font-size: 1em;
+      font-style: italic;
+  }
+
+  #caption h3 {
+      font-weight: 200;
+      font-size: .8em;
+      margin-top: 2px;
+  }
+
+
+
+  /*work section*/
+  .tile {
+      height: 350px;
+      overflow: hidden;
+  }
+
+  .overlay {
+      font-family: 'lobster', cursive;
+      font-size: 3em;
+      vertical-align: middle;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      width: 100%;
+      height: 350px;
+      background: rgba(6, 31, 69, 0.8);
+      z-index: 50;
+      display: none;
+      margin-top: -350px;
+      pointer-events: none;
+  }
+
+  .overlay>div {
+      display: table;
+      height: 350px;
+      overflow: hidden;
+      width: 100%;
+  }
+
+  .overlay>div>div {
+      display: table-cell;
+      vertical-align: middle;
+  }
+
+  .overlay p {
+      text-align: center;
+      line-height: 1em;
+      padding: 0 20px;
+  }
+
+  .subtile,
+  .subthumb {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+      z-index: 0;
+  }
+
+  .subtile:hover {
+      -webkit-animation-name: zoomRotate;
+      -webkit-animation-duration: 0.8s;
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-fill-mode: forwards;
+
+      -moz-animation-name: zoomRotate;
+      -moz-animation-duration: 0.8s;
+      -moz-animation-iteration-count: 1;
+      -moz-animation-timing-function: linear;
+      -moz-animation-fill-mode: forwards;
+
+      animation-name: zoomRotate;
+      animation-duration: 0.8s;
+      animation-iteration-count: 1;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
+  }
+
+  @-webkit-keyframes zoomRotate {
+      from {
+          -webkit-transform: scale(1, 1) rotate(0deg);
+      }
+
+      to {
+          -webkit-transform: scale(1.15, 1.15) rotate(3deg);
+      }
+  }
+
+  @-moz-keyframes zoomRotate {
+      from {
+          -moz-transform: scale(1, 1) rotate(0deg);
+      }
+
+      to {
+          -moz-transform: scale(1.15, 1.15) rotate(3deg);
+      }
+  }
+
+  @keyframes zoomRotate {
+      from {
+          transform: scale(1, 1) rotate(0deg);
+      }
+
+      to {
+          transform: scale(1.15, 1.15) rotate(3deg);
+      }
+  }
+
+
+
+  /*artwork page*/
+  .thumb {
+      height: 16.7vh;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      overflow: hidden;
+  }
+
+  .subthumb:hover {
+      -webkit-animation-name: zoom;
+      -webkit-animation-duration: 0.5s;
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation-timing-function: ease-in-out;
+      -webkit-animation-fill-mode: forwards;
+
+      -moz-animation-name: zoom;
+      -moz-animation-duration: 0.5s;
+      -moz-animation-iteration-count: 1;
+      -moz-animation-timing-function: ease-in-out;
+      -moz-animation-fill-mode: forwards;
+
+      animation-name: zoom;
+      animation-duration: 0.5s;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+  }
+
+  @-webkit-keyframes zoom {
+      from {
+          -webkit-transform: scale(1, 1);
+      }
+
+      to {
+          -webkit-transform: scale(1.1, 1.1);
+      }
+  }
+
+  @-moz-keyframes zoom {
+      from {
+          -webkit-transform: scale(1, 1);
+      }
+
+      to {
+          -webkit-transform: scale(1.1, 1.1);
+      }
+  }
+
+  @keyframes zoom {
+      from {
+          -webkit-transform: scale(1, 1);
+      }
+
+      to {
+          -webkit-transform: scale(1.1, 1.1);
+      }
+  }
+
+  #preview p {
+      color: #061f45;
+      padding-left: 5.2%;
+      width: 90%;
+      margin: 0 auto;
+      font-family: 'lobster', cursive;
+      font-size: 3em;
+      margin: 20px 0;
+  }
+
+  #photoWrapper {
+      width: 90%;
+      margin: 0 auto;
+      height: 82vh;
+      overflow: auto;
+      position: relative;
+  }
+
+  #photo {
+      width: 100%;
+  }
+
+  #artCaption {
+      position: absolute;
+      top: 2%;
+      right: 0;
+  }
+
+  #artCaption h2,
+  #artCaption h3 {
+      background-color: rgba(6, 31, 69, 0.1);
+      color: #fff;
+      display: block;
+      float: right;
+      padding: 3px 5px;
+      margin-right: 5%;
+  }
+
+  #artCaption h2 {
+      font-weight: 600;
+      font-size: 1em;
+      font-style: italic;
+  }
+
+  #artCaption h3 {
+      font-weight: 200;
+      font-size: .8em;
+      margin-top: -11px;
+  }
+
+
+
+  /*images*/
+  .logotipos {
+      background-image: url("../img/logotipos/marca-lena-oficial-certo-2201x1691.png");
+  }
+
+  .designer-editorial {
+      background-image: url("../img/designer-editorial/banana-capa-banana-final2_page-0001-1440x614.jpg");
+  }
+
+  .instagramTile {
+      background-image: url("");
+  }
+
+  .linkedinTile {
+      background-image: url("");
+  }
+
+  .tumblrTile {
+      background-image: url("../img/folder/luminaria_tucuma_page-0001-768x542.jpg");
+  }
+
+  .ilustracao {
+      background-image: url("");
+  }
+
+  .facebookTile {
+      background-image: url("");
+  }
+
+  .poptropica {
+      background-image: url("");
+  }
+
+  .orbs {
+      background-image: url("");
+  }
+
+  .three_hands {
+      background-image: url("");
+  }
+
+  .still_life {
+      background-image: url("");
+  }
+
+  .converse {
+      background-image: url("");
+      background-position: 50% 5%;
+  }
+
+  .self_portrait {
+      background-image: url("");
+  }
+
+  .watershed {
+      background-image: url("");
+  }
+
+  .seattle_needle {
+      background-image: url("");
+      background-position: center top;
+  }
+
+  .gate {
+      background-image: url("");
+  }
+
+  .skeleton {
+      background-image: url("");
+      background-position: center top;
+  }
+
+  .hogwarts {
+      background-image: url("");
+  }
+
+  .smithsonian {
+      background-image: url("");
+  }
+
+  .lily {
+      background-image: url("");
+  }
+
+  .figure_5min {
+      background-image: url("");
+      background-position: center top;
+  }
+
+  .not_so_still {
+      background-image: url("");
+      background-position: 50% 35%;
+  }
+
+  .castle_interior {
+      background-image: url("");
+  }
+
+  .broken_heart {
+      background-image: url("");
+  }
+
+
+  /*responsive from 575px to 899px*/
+  @media screen and (max-width: 899px) and (min-width: 575px) {
+
+      #wrapper {
+          width: 100%;
+      }
+
+      #mark {
+          margin: 0 auto;
+          margin-top: 140px;
+          display: block;
+      }
+     .ola{
+        top:160px;
+        left: 120px;
+     }
+      #details {
+        
+          text-align: center;
+          margin: 0 auto;
+          right: -180px;
+          top: 180px;
+          margin-top: 20px;
+      }
+    .imglogo{
+        top:0;
+    }
+      #caption {
+          text-align: center;
+          margin: 0 auto;
+          bottom: auto;
+          right: auto;
+          position: relative;
+          width: 500px;
+          margin-top: 50px;
+      }
+
+      #caption h2,
+      #caption h3 {
+          display: block;
+          margin-right: 0 ;
+          position: relative;
+         right: -50px;
+         bottom: -300px;
+      }
+
+      #caption h3 {
+          margin-top: 2px;
+      }
+
+      .tile,
+      .thumb {
+          height: 450px;
+      }
+
+      .overlay {
+          height: 450px;
+          margin-top: -450px;
+
+      }
+
+      .subthumb:hover {
+          -webkit-animation: none !important;
+          -moz-animation: none !important;
+          animation-name: none !important;
+      }
+
+      #preview {
+          display: none;
+      }
+
+      .overlay>div {
+          height: 450px;
+      }
+
+  }
+
+
+  /*responsive from 0 to 574px*/
+  @media screen and (max-width: 574px) {
+
+      #intro {
+          background-position: 60% 50%;
+      }
+      .ola{
+        top: 140px;
+        left: 100px;
+      }
+      #rightNav{
+        
+        justify-content: center;
+        margin: auto;
+      }
+      .imglogo{
+       
+        top:0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      #wrapper {
+          width: 100%;
+      }
+
+      #mark {
+        width: 100%;
+          margin: 0 auto;
+          margin-top: 140px;
+          display: block;
+      }
+
+      #details {
+          text-align: center;
+          margin: 0 auto;
+          margin-top: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+          top: 55%;
+      }
+
+      #caption,
+      #preview {
+          display: none;
+      }
+
+      #leftNav {
+          display: none;
+      }
+
+      .thumb {
+          height: 350px;
+      }
+
+      .subthumb:hover {
+          -webkit-animation: none !important;
+          -moz-animation: none !important;
+          animation-name: none !important;
+      }
+      
+
+  }
