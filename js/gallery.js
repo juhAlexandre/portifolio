@@ -168,7 +168,7 @@ function obterGet() {
      let url = window.location.pathname;
     const urlHostName = window.location.hostname;
   if(urlHostName == "jussaraalexandre.github.io"){
-     url = url.slice(11);
+     url = url.slice(12);
     console.log(url);
   }else{
      url = url.slice(1);
