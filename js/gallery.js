@@ -165,8 +165,14 @@ let listaurl = [
 ];
 
 function obterGet() {
-
-  const url = window.location.pathname.slice(1);
+     let url = window.location.pathname;
+    const urlHostName = window.location.hostname;
+  if(urlHostname == "https://jussaraalexandre.github.io/"){
+     url = url.slice(11);
+  }else{
+     url = window.location.pathname.slice(1);
+  }
+  
   listaurl.forEach(elemento => {
     if (url == elemento.url) {
       switch (elemento.list) {
