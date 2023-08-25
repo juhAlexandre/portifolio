@@ -169,8 +169,10 @@ function obterGet() {
     const urlHostName = window.location.hostname;
   if(urlHostName == "jussaraalexandre.github.io"){
      url = url.slice(11);
+    console.log(url);
   }else{
      url = url.slice(1);
+    console.log(url);
   }
   
   listaurl.forEach(elemento => {
