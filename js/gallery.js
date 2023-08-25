@@ -171,8 +171,10 @@ function obterGet() {
     if (url == elemento.url) {
       switch (elemento.list) {
         case 'designerEditorial': updateGallery(designerEditorial, elemento.path);
+          console.log(elemento.path);
           break;
         case 'designGrafico': updateGallery(designGrafico, elemento.path);
+          console.log(elemento.path);
           break;
       }
     }
@@ -184,6 +186,8 @@ function obterGet() {
 let switching = false;
 
 function updateGallery(gallery, path) {
+  console.log(path+"<br>");
+  console.log(gallery);
   $('.gallery__core img, .gallery__bg img').attr('src', 'img/' + path + "/" + gallery[0].url);
   $('.gallery__track').empty();
   gallery.forEach((index, item) => {
