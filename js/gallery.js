@@ -167,7 +167,7 @@ let listaurl = [
 function obterGet() {
      let url = window.location.pathname;
     const urlHostName = window.location.hostname;
-  if(urlHostname == "https://jussaraalexandre.github.io/"){
+  if(urlHostname == "jussaraalexandre.github.io"){
      url = url.slice(11);
   }else{
      url = window.location.pathname.slice(1);
