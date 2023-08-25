@@ -167,10 +167,10 @@ let listaurl = [
 function obterGet() {
      let url = window.location.pathname;
     const urlHostName = window.location.hostname;
-  if(urlHostname == "jussaraalexandre.github.io"){
+  if(urlHostName == "jussaraalexandre.github.io"){
      url = url.slice(11);
   }else{
-     url = window.location.pathname.slice(1);
+     url = url.slice(1);
   }
   
   listaurl.forEach(elemento => {
